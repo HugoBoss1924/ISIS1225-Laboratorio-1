@@ -38,9 +38,9 @@ This repository is part of the data structure and algorithms (#EDA) teaching fra
 
 The students edit this section to add their names, Uniandes emails, and specify which project functionality of the project they will implement.
 
-1. Jerson Daniel Fandiño Bohorquez, jd.fandino@uniandes.edu.co, 201816254.
-2. Miguel Arturo Aguilar González, m.aguilarg@uniandes.edu.co, 202411646.
-3. Sara Hernández Orjuela, s.hernandezo2@uniandes.edu.co, 202412681.
+1. Student No. 1 Name, Student No. 1 Uniandes Email, Student No. 1 owned functionality.
+1. Student No. 2 Name, Student No. 2 Uniandes Email, Student No. 2 owned functionality.
+1. Student No. 3 Name, Student No. 3 Uniandes Email, Student No. 3 owned functionality.
 
 [Back to top](#laboratorio-1)
 

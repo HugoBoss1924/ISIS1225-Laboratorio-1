@@ -30,7 +30,7 @@ import os
 
 from DataStructures import set as set
 
-data_dir = os.path.dirname(os.path.realpath('__file__')) + '/Data/'
+data_dir = os.path.dirname(os.path.realpath("__file__")) + "/Data/"
 
 """
 El controlador se encarga de mediar entre la vista y el modelo.
@@ -58,6 +58,7 @@ def new_logic():
 
 
 # Funciones para la carga de datos
+
 
 def load_books(app, filename):
     """
@@ -93,8 +94,14 @@ def load_books_tags(control, filename):
     Carga los tags de los libros del archivo y los agrega a la lista
     de tags. Siga el mismo procedimiento que en la carga de libros.
     """
-    # TODO: Mods Lab 1, integrar vista y logica
-    pass
+    book_tags = control.get("book_tags")
+    book_tags_file = os.path.join(data_dir, filename)
+    control["book_tags"] = set.load_set(book_tags, book_tags_file)
+    if empty_book_tags(control):
+        return None
+    else:
+        return book_tag_size(control)
+
 
 # Funciones de consulta
 

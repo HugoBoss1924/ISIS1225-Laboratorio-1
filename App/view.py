@@ -50,7 +50,7 @@ def printMenu():
     print("Opciones:")
     print("1- Cargar Libros")
     print("2- Cargar Tags")
-    # TODO: Mods Lab 1, agregar la opcion 3.
+    print("3- Cargar book tags")
     print("0- Salir")
 
 
@@ -58,8 +58,7 @@ def load_books(app):
     """
     Carga los libros
     """
-    books = logic.load_books(app,
-                             "GoodReads/books-small.csv")
+    books = logic.load_books(app, "GoodReads/books-small.csv")
     return books
 
 
@@ -67,8 +66,7 @@ def load_tags(app):
     """
     Carga los Tags
     """
-    tags = logic.load_tags(app,
-                           "GoodReads/tags.csv")
+    tags = logic.load_tags(app, "GoodReads/tags.csv")
     return tags
 
 
@@ -76,8 +74,7 @@ def load_books_tags(app):
     """
     Cargar los Tags de libros
     """
-    booksTags = logic.load_books_tags(app,
-                                      "GoodReads/book_tags-small.csv")
+    booksTags = logic.load_books_tags(app, "GoodReads/book_tags-small.csv")
     return booksTags
 
 
@@ -107,9 +104,10 @@ def main():
             tags = load_tags(app)
             print("Total de tags cargados: " + str(tags) + "\n")
 
-        # TODO: Mods Lab 1, agregar la funcion opt 3 -> load_book_tags().
         elif int(inputs[0]) == 3:
-            pass
+            print("Cargando información de book_tags....")
+            booksTags = load_books_tags(app)
+            print("Total de tags de libros cargados: " + str(booksTags) + "\n")
 
         elif int(inputs[0]) == 0:
             working = False
